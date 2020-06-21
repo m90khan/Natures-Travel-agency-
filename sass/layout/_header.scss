@@ -1,0 +1,57 @@
+.header {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(../img/hero-small.jpg);
+
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+    only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+    only screen and (min-width: 125em) {
+    //(min-resolution: 192dpi does not work in safari so we have to use
+    // -webkit-min-device-pixel-ratio: 2
+
+    // default apple screen resolution
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)
+      ),
+      url(../img/hero.jpg);
+  }
+
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 85vh;
+
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    height: 95vh;
+  }
+  @include respond(phone) {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 95%, 0 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 95%, 0 100%);
+  }
+  &__logo {
+    top: 3rem;
+    left: 3rem;
+    position: absolute;
+    &-image {
+      height: 4rem;
+    }
+  }
+
+  &__heading {
+    top: 45%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+  }
+}

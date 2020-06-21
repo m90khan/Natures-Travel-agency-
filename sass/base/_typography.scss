@@ -1,0 +1,71 @@
+body {
+  font-family: "Lato", sans-serif;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+//Primary Heading
+.heading-primary {
+  margin-bottom: 4rem;
+  color: $color-white;
+  &--main {
+    font-size: $header1;
+    display: inline-block;
+    font-weight: 900;
+    letter-spacing: 4rem;
+    @include respond(phone) {
+      letter-spacing: 1rem;
+    }
+  }
+  &--sub {
+    font-size: $header2;
+    letter-spacing: 1rem;
+    display: inline-block;
+    @include respond(phone) {
+      letter-spacing: 0.5rem;
+    }
+  }
+}
+
+//Secondary Heading
+.heading-secondary {
+  color: transparent;
+  text-transform: uppercase;
+  font-size: $header2;
+  display: inline-block;
+  font-weight: 900;
+  letter-spacing: 2px;
+  z-index: 2;
+  background: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: all 0.5s;
+
+  &:hover {
+    transform: skewY(4deg) scale(1.1);
+    text-shadow: 0rem 2rem 2rem rgba($color-black, 0.5);
+  }
+}
+//Heading third
+.heading-third {
+  text-transform: uppercase;
+  color: $color-grey-dark;
+  font-size: 1.8rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.paragraph {
+  font-size: $text;
+  color: $color-grey-dark;
+  @include respond(tab-land) {
+    font-size: $text-res;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}

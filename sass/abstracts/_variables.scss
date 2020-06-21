@@ -1,0 +1,29 @@
+$header1: calc(4.5rem + 1vw);
+$header2: calc(1.3rem + 1vw);
+$bigtext: calc(2rem + 1vw);
+$header3: calc(0.2rem + 1vw);
+
+$text: 1.8rem;
+$text-res: calc(0.8rem + 1vw); // for < 900px
+
+$color-primary-light: #7ed56f;
+$color-primary: #55c57a;
+$color-primary-dark: rgb(40, 180, 133);
+
+$color-secondary-light: #ffb900;
+$color-secondary-dark: #ff7730;
+
+$color-tertiary-light: #2998ff;
+$color-tertiary-dark: #5643fa;
+
+$color-grey-dark: #777;
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+$color-grey-dark-3: #333;
+$color-black: #000;
+$color-white: #fff;
+
+$grid-width: 120rem;
+$gutter-vertical: 8rem;
+$gutter-vertical-small: 5rem;
+$gutter-horizontal: 3rem;

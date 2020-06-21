@@ -1,0 +1,174 @@
+.navigation {
+  // &__checkbox {
+  //   display: none;
+  // }    transition: all 4s;
+
+  &__button {
+    background-color: $color-white;
+    top: 6rem;
+    right: 6rem;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+    height: 7rem;
+    width: 7rem;
+    box-shadow: 0 1rem 3rem rgba($color-black, 0.8);
+    text-align: center;
+
+    @include respond(tab-land) {
+      top: 4rem;
+      right: 4.5rem;
+    }
+    @include respond(tab-port) {
+      top: 2rem;
+      right: 4rem;
+    }
+  }
+
+  &__background {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 6.5rem;
+    right: 6.5rem;
+    background-image: radial-gradient(
+      $color-primary-light,
+      $color-primary-dark
+    );
+    z-index: 90;
+    transition: all 5s;
+
+    @include respond(tab-land) {
+      top: 4rem;
+      right: 4.5rem;
+    }
+    @include respond(tab-port) {
+      top: 2.5rem;
+      right: 4.5rem;
+    }
+    @include respond(phone) {
+      top: 2.5rem;
+      right: 4rem;
+    }
+  }
+
+  &__nav {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 96;
+  }
+  &__list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  &__item {
+    margin: 2rem;
+  }
+  &__link {
+    &:link,
+    &:visited {
+      color: $color-white;
+      font-size: $bigtext;
+      display: inline-block;
+      text-transform: uppercase;
+      padding: 1rem 2rem;
+      position: relative;
+      background-image: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 50%,
+        $color-white 50%
+      );
+      background-size: 220%;
+      transition: all 0.5s;
+
+      &:hover,
+      &:active {
+        background-position: 100%;
+        color: $color-primary-dark;
+        transform: translateX(5%);
+      }
+    }
+  }
+
+  .toggle + &__background {
+    transform: scale(100);
+  }
+
+  // &__checkbox:checked ~ &__background {
+  //   transform: scale(100);
+  // }
+  // &__checkbox:checked ~ &__nav {
+  //   opacity: 1;
+  //   width: 100%;
+  // }
+
+  &__icon {
+    position: relative;
+    margin-top: 3.5rem;
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: $color-grey-dark-3;
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+    }
+
+    &::before {
+      top: -0.8rem;
+    }
+    &::after {
+      top: 0.8rem;
+    }
+  }
+
+  &__button:hover &__icon::before {
+    top: -1rem;
+  }
+
+  &__button:hover &__icon::after {
+    top: 1rem;
+  }
+
+  .toggle &__icon {
+    background-color: transparent;
+  }
+
+  .toggle &__icon::before {
+    transform: rotateZ(45deg) translate(4%, 400%);
+    transform-origin: top center;
+  }
+  .toggle &__icon::after {
+    transform: rotateZ(-45deg) translate(20%, -300%);
+    transform-origin: bottom center;
+  }
+
+  // &__checkbox:checked + &__button &__icon {
+  //   background-color: transparent;
+  // }
+
+  // &__checkbox:checked + &__button &__icon::before {
+  //   top: 0;
+  //   transform: rotate(135deg);
+  // }
+
+  // &__checkbox:checked + &__button &__icon::after {
+  //   top: 0;
+  //   transform: rotate(-135deg);
+  // }
+}

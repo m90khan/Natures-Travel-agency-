@@ -1,0 +1,44 @@
+Fron-End for the Travel Agency
+
+Html5, Css3, Sass(SCSS Syntax)
+
+Layout: Float layout (BEM Model)
+How to artichect and build a grid system
+
+- Responsive Web Design, Maintable Scaleable Code, Web Performance
+
+- Responsive Web Design: Desktop First vs Mobile First 
+Both have Pros and Cons. but it Depends on the requirements. but keeping both of them in mind is the best solution. 
+
+- Selecting Breakpoints Options: 
+Bad: using Apple devices, not future proof. 
+Good: Look at all most used devices, group them in logial way and assign breakpoints in a range. 
+BEst: Ignore all devices. only look at content and design. difficult to apply.
+
+
+- CSS parser (Understands the process of loading the html head, Cascade, visual formating Model)
+Important > Specifity > Source Order.
+7-1 Pattern Component Driven design.
+(base|abstracts|componenets|layout|pages|themes|vendors)
+
+ 
+- media queries Use rem for layout. em for media queries
+
+- Responsive images 
+implementation for HTML as well as CSS
+
+Resolution switching : serve same image but with different resolution by defining the width of images and their sizes on a viewport along with default image.
+
+Density switching: Serve same image but with different density alowing the browser to choose. 
+
+Art Direction: serve different Images combined density switching based on the media query
+ 
+
+- not pseudo class, perspective property, backdrop-filter, clip-path, solid gradient with percentage,
+
+- Testing for Brower Supports with @supports
+
+- To run for devserver, uncomment the line in html  <!-- <link rel="stylesheet" href="icons/styles.css" /> -->
+
+ 
+
