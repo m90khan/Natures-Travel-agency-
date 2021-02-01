@@ -68,7 +68,7 @@ Live: https://github.com/m90khan/Natures-Travel-agency-/
 - Testing for Brower Supports with @supports
 - To run for devserver, uncomment the line in html <!-- <link rel="stylesheet" href="icons/styles.css" /> -->
 
-<img src="./img/desktop-macbook.jpg" alt="" />
+<img src="./img/Natures.jpg" alt="" />
 
 ---
 
